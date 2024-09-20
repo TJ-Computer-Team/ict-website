@@ -105,7 +105,7 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-center mb-12">American Computer Science League FAQ's</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">American Computer Science League FAQ&apos;s</h2>
         <div className="space-y-8">
           <div>
             <h3 className="text-2xl font-semibold mb-2">What?</h3>
@@ -127,7 +127,7 @@ export default function Home() {
           <div>
             <h3 className="text-2xl font-semibold mb-2">Where?</h3>
             <p className="text-gray-700">
-              During normal meetings we meet in Curie Commons. Competitions will usually be held in Ms.Kim's and Mr.Rose's rooms.
+              During normal meetings we meet in Curie Commons. Competitions will usually be held in Ms.Kim&apos;s and Mr.Rose&apos;s rooms.
             </p>
           </div>
           <div>

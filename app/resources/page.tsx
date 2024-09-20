@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Resources() {
   const resources = [
     {
@@ -17,7 +15,7 @@ export default function Resources() {
       items: [
         { name: "CP-Algorithms", link: "https://cp-algorithms.com/" },
         { name: "USACO Guide", link: "https://usaco.guide/" },
-        { name: "Competitive Programmer's Handbook", link: "https://cses.fi/book/book.pdf" },
+        { name: "Competitive Programmer&apos;s Handbook", link: "https://cses.fi/book/book.pdf" },
         { name: "Algorithms for Competitive Programming", link: "https://cp-algorithms.com/" },
       ]
     },
@@ -109,7 +107,7 @@ export default function Resources() {
             Feel free to email us, join our discord server, join our facebook, or ask any members or officers about the club!
           </p>
           <p>
-            If you have any questions or need help, don't hesitate to reach out to the ICT officers or join our
+            If you have any questions or need help, don&apos;t hesitate to reach out to the ICT officers or join our
             <a 
               href="https://discord.gg/TFrM4YEsb4" 
               target="_blank" 
