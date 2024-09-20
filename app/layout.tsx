@@ -31,6 +31,7 @@ export default function RootLayout({
                 <ul className="flex space-x-6">
                   <li><Link href="/" className="hover:text-gray-300 transition-colors">Home</Link></li>
                   <li><Link href="/resources" className="hover:text-gray-300 transition-colors">Resources</Link></li>
+                  <li><Link href="/calendar" className="hover:text-gray-300 transition-colors">Calendar</Link></li>
                   <li><a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Grader</a></li>
                   <li><a href="https://www.facebook.com/groups/tjhsstict" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Facebook</a></li>
                   <li><a href="https://discord.gg/TFrM4YEsb4" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Discord</a></li>
