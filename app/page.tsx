@@ -1,9 +1,32 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, MapPin, LightbulbIcon } from 'lucide-react'
+import { Calendar, MapPin, LightbulbIcon, ChevronDown } from 'lucide-react'
 import './globals.css'
+import { useState } from 'react'
 
 export default function Home() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+
+  const faqItems = [
+    {
+      question: "What?",
+      answer: "The American Computer Science League is a four part competition. Competitions are held at TJHSST Computer Team over a period of months. There are a total of 40 possible points. 5 points are awarded for a paper test section. 5 points are awarded for a computer program section. These contests serve as qualifiers for the Finals contest with prizes."
+    },
+    {
+      question: "When?",
+      answer: "ICT holds ACSL contests on Friday B Blocks during 8th periods. For more information, visit the ACSL website at acsl.org"
+    },
+    {
+      question: "Where?",
+      answer: "During normal meetings we meet in Curie Commons. Competitions will usually be held in Ms.Kim's and Mr.Rose's rooms."
+    },
+    {
+      question: "Preparation?",
+      answer: "We strongly recommend that you attend our weekly computer team 8th periods for informative lectures and activities. The officers put a lot of time into lecture problems and materials, and seeing you there makes their job all the more worth it."
+    }
+  ]
+
   return (
     <div>
       <section className="relative h-screen flex items-center justify-center">
@@ -68,7 +91,7 @@ export default function Home() {
             <Image 
               src="https://cdn.discordapp.com/attachments/1055908367576608801/1286320503400697999/pic01.jpg?ex=66ed7ad2&is=66ec2952&hm=9b4f746992c6165e040caf1ddc8d6991273cb39af349cad3a80cd1338325bdd9&" 
               alt="ICT in action" 
-              layout="fill" 
+              layout="fill"
               objectFit="cover" 
               className="rounded-lg shadow-xl"
             />
@@ -84,7 +107,7 @@ export default function Home() {
               <Image 
                 src="https://cdn.discordapp.com/attachments/1055908367576608801/1286321181921771520/image003.jpg?ex=66ed7b74&is=66ec29f4&hm=1cc7f260a969debd788f1b710ef98f3a66f617ebf7af03d1037b0ff12176275b&" 
                 alt="Travel competitions" 
-                layout="fill" 
+                layout="fill"
                 objectFit="cover" 
                 className="rounded-lg shadow-xl"
               />
@@ -106,37 +129,23 @@ export default function Home() {
 
       <section className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-bold text-center mb-12">American Computer Science League FAQ&apos;s</h2>
-        <div className="space-y-8">
-          <div>
-            <h3 className="text-2xl font-semibold mb-2">What?</h3>
-            <p className="text-gray-700">
-              The American Computer Science League is a four part competition. 
-              Competitions are held at TJHSST Computer Team over a period of months. 
-              There are a total of 40 possible points. 5 points are awarded for a paper test section. 
-              5 points are awarded for a computer program section. 
-              These contests serve as qualifiers for the Finals contest with prizes.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold mb-2">When?</h3>
-            <p className="text-gray-700">
-              ICT holds ACSL contests on Friday B Blocks during 8th periods. For more information, visit the ACSL website at 
-              <a href="https://www.acsl.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline ml-1">acsl.org</a>
-            </p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold mb-2">Where?</h3>
-            <p className="text-gray-700">
-              During normal meetings we meet in Curie Commons. Competitions will usually be held in Ms.Kim&apos;s and Mr.Rose&apos;s rooms.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold mb-2">Preparation?</h3>
-            <p className="text-gray-700">
-              We strongly recommend that you attend our weekly computer team 8th periods for informative lectures and activities. The 
-              officers put a lot of time into lecture problems and materials, and seeing you there makes their job all the more worth it.
-            </p>
-          </div>
+        <div className="max-w-3xl mx-auto">
+          {faqItems.map((item, index) => (
+            <div key={index} className="mb-4">
+              <button
+                className="flex justify-between items-center w-full text-left p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+              >
+                <h3 className="text-xl font-semibold">{item.question}</h3>
+                <ChevronDown className={`transform transition-transform duration-200 ${openFaq === index ? 'rotate-180' : ''}`} />
+              </button>
+              {openFaq === index && (
+                <div className="mt-2 p-4 bg-gray-50 rounded-lg">
+                  <p className="text-gray-700">{item.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
     </div>
