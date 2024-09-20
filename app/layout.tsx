@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-white text-black`}>
         <div className="flex flex-col min-h-screen">
-          <header className="bg-black text-white shadow-md sticky top-0 z-10">
+          <header className="bg-black text-white shadow-md sticky top-0 z-50">
             <div className="container mx-auto px-4">
               <nav className="flex justify-between items-center py-4">
                 <Link href="/" className="text-2xl font-bold flex items-center">
@@ -34,6 +34,7 @@ export default function RootLayout({
                   <li><a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Grader</a></li>
                   <li><a href="https://www.facebook.com/groups/tjhsstict" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Facebook</a></li>
                   <li><a href="https://discord.gg/TFrM4YEsb4" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Discord</a></li>
+                  <li><a href="https://drive.google.com/drive/folders/11DWMeYSvpP131RMc1kdytq2ofvkGiXhw" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">24-25 Drive</a></li>
                 </ul>
               </nav>
             </div>
