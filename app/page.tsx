@@ -3,10 +3,23 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, MapPin, LightbulbIcon, ChevronDown } from 'lucide-react'
 import './globals.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
+  const [scrollY, setScrollY] = useState(0)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const faqItems = [
     {
@@ -29,17 +42,26 @@ export default function Home() {
 
   return (
     <div>
-      <section className="relative h-screen flex items-center justify-center">
-        <Image
-          src="https://cdn.discordapp.com/attachments/1055908367576608801/1286316837260496937/image.png?ex=66ed7768&is=66ec25e8&hm=dc082e034b87f401cb40218b1da3acd6a01c04a525074413a17049c6d8963831&"
-          alt="Group of people"
-          layout="fill"
-          objectFit="cover"
-          className="z-0"
-        />
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`,
+            transition: 'transform 0.5s cubic-bezier(0.33, 1, 0.68, 1)'
+          }}
+        >
+          <Image
+            src="https://cdn.discordapp.com/attachments/1055908367576608801/1286316837260496937/image.png?ex=66ed7768&is=66ec25e8&hm=dc082e034b87f401cb40218b1da3acd6a01c04a525074413a17049c6d8963831&"
+            alt="Group of people"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
         <div className="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
         <div className="relative z-20 text-white text-center px-4 max-w-4xl">
-          <h1 className="text-5xl font-bold mb-8">TJ Intermediate Computer Team</h1>
+          <h1 className="text-5xl font-bold mb-8">
+            TJ Intermediate Computer Team
+          </h1>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="flex items-center justify-center">
               <Calendar className="w-8 h-8 mr-3" />
