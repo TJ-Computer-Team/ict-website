@@ -16,6 +16,11 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href={metadata.icons.icon} />
+      </head>
       <body className={`${inter.className} bg-white text-black`}>
         <div className="flex flex-col min-h-screen">
           <header className="bg-black text-white shadow-md sticky top-0 z-50">
