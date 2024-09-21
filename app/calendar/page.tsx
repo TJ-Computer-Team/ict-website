@@ -4,12 +4,10 @@ export default function CalendarPage() {
     return (
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8 text-center">ICT Calendar</h1>
-        <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="bg-white p-4 rounded-lg shadow-md overflow-hidden">
           <iframe
             src={calendarUrl}
-            style={{border: 0}}
-            width="100%"
-            height="600"
+            style={{ border: 0, width: '100%', height: '600px' }}
             frameBorder="0"
             scrolling="no"
             title="ICT Google Calendar"

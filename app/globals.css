@@ -135,3 +135,20 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+}

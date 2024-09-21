@@ -23,12 +23,12 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <header className="bg-black text-white shadow-md sticky top-0 z-50">
             <div className="container mx-auto px-4">
-              <nav className="flex justify-between items-center py-4">
-                <Link href="/" className="text-2xl font-bold flex items-center">
+              <nav className="flex flex-col md:flex-row justify-between items-center py-4">
+                <Link href="/" className="text-2xl font-bold flex items-center mb-2 md:mb-0">
                   <img src="https://cdn.discordapp.com/attachments/1055908367576608801/1286525027591782431/file.png?ex=66ee394d&is=66ece7cd&hm=3dc144f3949bb8321fa363db7eb1907519e52d1f7fdea047b123944f926ee100&" alt="ICT Logo" className="h-8 w-8 mr-2" />
                   TJ ICT
                 </Link>
-                <ul className="flex space-x-6">
+                <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
                   <li><Link href="/" className="hover:text-gray-300 transition-colors">Home</Link></li>
                   <li><Link href="/resources" className="hover:text-gray-300 transition-colors">Resources</Link></li>
                   <li><Link href="/calendar" className="hover:text-gray-300 transition-colors">Calendar</Link></li>
