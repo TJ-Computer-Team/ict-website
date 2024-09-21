@@ -3,7 +3,7 @@ export default function CalendarPage() {
   
     return (
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-8 text-center">ICT Calendar</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center mt-12">ICT Calendar</h1>
         <div className="bg-white p-4 rounded-lg shadow-md overflow-hidden">
           <iframe
             src={calendarUrl}

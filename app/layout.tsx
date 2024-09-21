@@ -1,43 +1,60 @@
-import Link from 'next/link'
-import { Inter } from 'next/font/google'
-import './globals.css'
+"use client";
+import Link from 'next/link';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { useState } from 'react';
+import { metadata } from './metadata';
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'TJ Intermediate Computer Team',
-  description: 'The (un)official website of Thomas Jefferson High School for Science and Technology&apos;s Intermediate Computer Team',
-  icons: {
-    icon: 'https://cdn.discordapp.com/attachments/1055908367576608801/1286525027591782431/file.png?ex=66ee394d&is=66ece7cd&hm=3dc144f3949bb8321fa363db7eb1907519e52d1f7fdea047b123944f926ee100&',
-  },
-}
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <html lang="en">
       <body className={`${inter.className} bg-white text-black`}>
         <div className="flex flex-col min-h-screen">
           <header className="bg-black text-white shadow-md sticky top-0 z-50">
-            <div className="container mx-auto px-4">
-              <nav className="flex flex-col md:flex-row justify-between items-center py-4">
-                <Link href="/" className="text-2xl font-bold flex items-center mb-2 md:mb-0">
-                  <img src="https://cdn.discordapp.com/attachments/1055908367576608801/1286525027591782431/file.png?ex=66ee394d&is=66ece7cd&hm=3dc144f3949bb8321fa363db7eb1907519e52d1f7fdea047b123944f926ee100&" alt="ICT Logo" className="h-8 w-8 mr-2" />
-                  TJ ICT
-                </Link>
-                <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
-                  <li><Link href="/" className="hover:text-gray-300 transition-colors">Home</Link></li>
-                  <li><Link href="/resources" className="hover:text-gray-300 transition-colors">Resources</Link></li>
-                  <li><Link href="/calendar" className="hover:text-gray-300 transition-colors">Calendar</Link></li>
-                  <li><a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Grader</a></li>
-                  <li><a href="https://www.facebook.com/groups/tjhsstict" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Facebook</a></li>
-                  <li><a href="https://discord.gg/TFrM4YEsb4" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Discord</a></li>
-                  <li><a href="https://drive.google.com/drive/folders/11DWMeYSvpP131RMc1kdytq2ofvkGiXhw" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">24-25 Drive</a></li>
-                </ul>
-              </nav>
+            <div className="container mx-auto px-4 flex justify-between items-center py-8 md:py-4">
+              <Link href="/" className="text-2xl font-bold flex items-center">
+                <img src="https://cdn.discordapp.com/attachments/1055908367576608801/1286525027591782431/file.png?ex=66ee394d&is=66ece7cd&hm=3dc144f3949bb8321fa363db7eb1907519e52d1f7fdea047b123944f926ee100&" alt="ICT Logo" className="h-8 w-8 mr-2" />
+                TJ ICT
+              </Link>
+              <div className="relative md:hidden">
+                <div className="flex items-center cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+                  <div className="flex flex-col space-y-1">
+                    <div className="h-1 w-8 bg-white"></div>
+                    <div className="h-1 w-8 bg-white"></div>
+                    <div className="h-1 w-8 bg-white"></div>
+                  </div>
+                </div>
+                {isOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-gray-800 bg-opacity-75 rounded-md shadow-lg z-50">
+                    <ul className="flex flex-col">
+                      <li><Link href="/" className="block px-4 py-2 text-white hover:bg-gray-700">Home</Link></li>
+                      <li><Link href="/resources" className="block px-4 py-2 text-white hover:bg-gray-700">Resources</Link></li>
+                      <li><Link href="/calendar" className="block px-4 py-2 text-white hover:bg-gray-700">Calendar</Link></li>
+                      <li><a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">Grader</a></li>
+                      <li><a href="https://www.facebook.com/groups/tjhsstict" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">Facebook</a></li>
+                      <li><a href="https://discord.gg/TFrM4YEsb4" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">Discord</a></li>
+                      <li><a href="https://drive.google.com/drive/folders/11DWMeYSvpP131RMc1kdytq2ofvkGiXhw" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">24-25 Drive</a></li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+              <div className="hidden md:flex space-x-6">
+                <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
+                <Link href="/resources" className="hover:text-gray-300 transition-colors">Resources</Link>
+                <Link href="/calendar" className="hover:text-gray-300 transition-colors">Calendar</Link>
+                <a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Grader</a>
+                <a href="https://www.facebook.com/groups/tjhsstict" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Facebook</a>
+                <a href="https://discord.gg/TFrM4YEsb4" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Discord</a>
+                <a href="https://drive.google.com/drive/folders/11DWMeYSvpP131RMc1kdytq2ofvkGiXhw" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">24-25 Drive</a>
+              </div>
             </div>
           </header>
           <main className="flex-grow">
@@ -58,5 +75,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  )
+  );
 }

@@ -41,7 +41,7 @@ export default function Resources() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-12 text-center">Resources</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center mt-12">Resources</h1>
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {resources.map((category, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">

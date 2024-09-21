@@ -11,7 +11,10 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY)
+      setScrollY(window.scrollY);
+      requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+      });
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -96,7 +99,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-20">
+      <section className="container mx-auto px-4 py-20 mt-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
             <h2 className="text-3xl font-semibold mb-4">About ICT</h2>
@@ -150,7 +153,7 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-center mb-12">American Computer Science League FAQ&apos;s</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 mt-12">American Computer Science League FAQ&apos;s</h2>
         <div className="max-w-3xl mx-auto">
           {faqItems.map((item, index) => (
             <div key={index} className="mb-4">
