@@ -35,7 +35,7 @@ export default function Home() {
     },
     {
       question: "Where?",
-      answer: "During normal meetings we meet in Curie Commons. Competitions will usually be held in Ms.Kim's and Mr.Rose's rooms."
+      answer: "During normal meetings we meet in Curie Commons. Competitions will usually be held in Ms. Kim's and Mr. Rose's rooms."
     },
     {
       question: "Preparation?",
