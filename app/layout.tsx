@@ -70,10 +70,10 @@ export default function RootLayout({
               <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
               <p className="mb-4">Email tjhsstictcaptains@gmail.com or talk to an officer (in person or through Facebook)</p>
               <p className="text-sm">
-                The GitHub repository for this project can be found <a href="https://github.com/ssbdragonfly/ict" target="_blank" rel="noopener noreferrer" className="underline">here</a>, feel free to create pull requests
+                The GitHub repository for this project can be found <a href="https://github.com/TJ-Computer-Team/ict-website" target="_blank" rel="noopener noreferrer" className="underline">here</a>, feel free to create pull requests.
               </p>
               <p className="text-sm mt-2">
-                Website made by: <a href="https://github.com/ssbdragonfly" target="_blank" rel="noopener noreferrer" className="underline">Shaurya Bisht (&apos;27)</a>, forked and altered based on <a href="https://github.com/Gabriel-Xu" target="_blank" rel="noopener noreferrer" className="underline">Gabriel Xu (&apos;25)</a>&apos;s website.
+                Website made by <a href="https://github.com/ssbdragonfly" target="_blank" rel="noopener noreferrer" className="underline">Shaurya Bisht (&apos;27)</a> and <a href="https://github.com/Gabriel-Xu" target="_blank" rel="noopener noreferrer" className="underline">Gabriel Xu (&apos;25)</a>.
               </p>
             </div>
           </footer>
