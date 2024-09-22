@@ -54,7 +54,7 @@ export default function Home() {
           }}
         >
           <Image
-            src="https://cdn.discordapp.com/attachments/1055908367576608801/1286316837260496937/image.png?ex=66ed7768&is=66ec25e8&hm=dc082e034b87f401cb40218b1da3acd6a01c04a525074413a17049c6d8963831&"
+            src="/group.png"
             alt="Group of people"
             layout="fill"
             objectFit="cover"
@@ -114,7 +114,7 @@ export default function Home() {
           </div>
           <div className="relative h-80 md:h-96">
             <Image 
-              src="https://cdn.discordapp.com/attachments/1055908367576608801/1286320503400697999/pic01.jpg?ex=66ed7ad2&is=66ec2952&hm=9b4f746992c6165e040caf1ddc8d6991273cb39af349cad3a80cd1338325bdd9&" 
+              src="/working.png" 
               alt="ICT in action" 
               layout="fill"
               objectFit="cover" 
@@ -130,7 +130,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 md:h-96">
               <Image 
-                src="https://cdn.discordapp.com/attachments/1055908367576608801/1286321181921771520/image003.jpg?ex=66ed7b74&is=66ec29f4&hm=1cc7f260a969debd788f1b710ef98f3a66f617ebf7af03d1037b0ff12176275b&" 
+                src="/comp.png" 
                 alt="Travel competitions" 
                 layout="fill"
                 objectFit="cover" 

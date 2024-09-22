@@ -15,7 +15,7 @@ export default function Resources() {
       items: [
         { name: "CP-Algorithms", link: "https://cp-algorithms.com/" },
         { name: "USACO Guide", link: "https://usaco.guide/" },
-        { name: "Competitive Programmer&apos;s Handbook", link: "https://cses.fi/book/book.pdf" },
+        { name: "Competitive Programmer's Handbook", link: "https://cses.fi/book/book.pdf" },
         { name: "Algorithms for Competitive Programming", link: "https://cp-algorithms.com/" },
       ]
     },
