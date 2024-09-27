@@ -1,5 +1,5 @@
 export default function CalendarPage() {
-    const calendarUrl = "https://calendar.google.com/calendar/embed?src=6c59d85691ee9f9cf8ab0bf6a866193ab5e0efe3d396edc0b3ac23e9f932d8f8%40group.calendar.google.com&ctz=America%2FNew_York"
+    const calendarUrl = "https://calendar.google.com/calendar/embed?src=49ba045dfedf495b29eb0829da786020559763d5bdea2508edb369a08e79d178%40group.calendar.google.com&ctz=America%2FNew_York"
   
     return (
       <div className="container mx-auto px-4 py-12">
