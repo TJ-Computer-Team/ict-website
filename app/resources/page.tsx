@@ -5,27 +5,24 @@ export default function Resources() {
       items: [
         { name: "USACO", link: "http://www.usaco.org/" },
         { name: "Codeforces", link: "https://codeforces.com/" },
-        { name: "AtCoder", link: "https://atcoder.jp/" },
-        { name: "HackerRank", link: "https://www.hackerrank.com/" },
-        { name: "LeetCode", link: "https://leetcode.com/" },
+        { name: "AtCoder", link: "https://atcoder.jp/" }
       ]
     },
     {
       title: "Resources to Learn",
       items: [
-        { name: "CP-Algorithms", link: "https://cp-algorithms.com/" },
         { name: "USACO Guide", link: "https://usaco.guide/" },
-        { name: "Competitive Programmer's Handbook", link: "https://cses.fi/book/book.pdf" },
-        { name: "Algorithms for Competitive Programming", link: "https://cp-algorithms.com/" },
+        { name: "CP-Algorithms", link: "https://cp-algorithms.com/" },
+        { name: "Competitive Programmer's Handbook", link: "https://usaco.guide/CPH.pdf" }
       ]
     },
     {
       title: "Practice Problems",
       items: [
+        { name: "Codeforces", link: "https://codeforces.com/problemset" },
+        { name: "USACO", link: "https://usaco.org/index.php?page=contests" },
         { name: "CSES Problem Set", link: "https://cses.fi/problemset/" },
-        { name: "Project Euler", link: "https://projecteuler.net/" },
-        { name: "Kattis", link: "https://open.kattis.com/" },
-        { name: "UVa Online Judge", link: "https://onlinejudge.org/" },
+        { name: "Kattis", link: "https://open.kattis.com/" }
       ]
     },
     {
@@ -62,41 +59,6 @@ export default function Resources() {
               </ul>
             </div>
           ))}
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Recommended Books</h2>
-          <ul className="space-y-2">
-            <li>
-              <a 
-                href="https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Introduction to Algorithms by Thomas H. Cormen
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://www.amazon.com/Competitive-Programming-3rd-Steven-Halim/dp/B00FG8MNN8" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Competitive Programming 3 by Steven Halim
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://www.amazon.com/Programming-Challenges-Contest-Training-Computer/dp/0387001638" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Programming Challenges by Steven S. Skiena
-              </a>
-            </li>
-          </ul>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md text-center">
           <h2 className="text-2xl font-semibold mb-4">Additional Resources</h2>
