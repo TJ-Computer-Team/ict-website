@@ -26,7 +26,7 @@ export default function RootLayout({
           <header className="bg-black text-white shadow-md sticky top-0 z-50">
             <div className="container mx-auto px-4 flex justify-between items-center py-8 md:py-4">
               <Link href="/" className="text-2xl font-bold flex items-center">
-                <img src="/temp_logo.png" alt="ICT Logo" className="h-8 w-8 mr-2" />
+                <img src="/logo.png" alt="ICT Logo" className="h-8 w-8 mr-2" />
                 TJ ICT
               </Link>
               <div className="relative md:hidden">
