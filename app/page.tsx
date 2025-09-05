@@ -108,8 +108,8 @@ export default function Home() {
               Attend to hone your skills (for both beginner and experienced programmers) and meet a community of like-minded people. 
               Do contests such as <a href="https://codeforces.com/group/M4wsRWBHyZ/contests" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Codeforces</a> and <a href="https://usaco.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">USACO</a>, and get better by looking at the <Link href="/resources" className="text-blue-600 hover:underline">resources</Link> section, which includes eighth period materials.
             </p>
-            <a href="https://docs.google.com/spreadsheets/d/1H4DdJTlFXAZqA6W1yegPFmOJGctda-t4ZL-_mmLoxgY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors">
-              Eighth period schedule (2024-2025)
+            <a href="https://docs.google.com/spreadsheets/d/1SccDSB4CX03clSghVohK7oTv_jGsjpK5jNCsKSktfVQ/edit" target="_blank" rel="noopener noreferrer" className="inline-block bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors">
+              Eighth period schedule (2025-2026)
             </a>
           </div>
           <div className="relative h-80 md:h-96">

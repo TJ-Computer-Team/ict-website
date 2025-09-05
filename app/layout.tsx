@@ -46,7 +46,7 @@ export default function RootLayout({
                       <li><a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">Grader</a></li>
                       <li><a href="https://www.facebook.com/groups/tjhsstict" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">Facebook</a></li>
                       <li><a href="https://discord.gg/TFrM4YEsb4" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">Discord</a></li>
-                      <li><a href="https://drive.google.com/drive/folders/11DWMeYSvpP131RMc1kdytq2ofvkGiXhw" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">24-25 Drive</a></li>
+                      <li><a href="https://drive.google.com/drive/folders/1d8BsY5orAo9g95gfi3SP_FTc6woiUd6q" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">25-26 Drive</a></li>
                     </ul>
                   </div>
                 )}
@@ -58,7 +58,7 @@ export default function RootLayout({
                 <a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Grader</a>
                 <a href="https://www.facebook.com/groups/tjhsstict" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Facebook</a>
                 <a href="https://discord.gg/TFrM4YEsb4" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Discord</a>
-                <a href="https://drive.google.com/drive/folders/11DWMeYSvpP131RMc1kdytq2ofvkGiXhw" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">24-25 Drive</a>
+                <a href="https://drive.google.com/drive/folders/1d8BsY5orAo9g95gfi3SP_FTc6woiUd6q" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">25-26 Drive</a>
               </div>
             </div>
           </header>
