@@ -43,6 +43,7 @@ export default function RootLayout({
                       <li><Link href="/" className="block px-4 py-2 text-white hover:bg-gray-700">Home</Link></li>
                       <li><Link href="/resources" className="block px-4 py-2 text-white hover:bg-gray-700">Resources</Link></li>
                       <li><Link href="/calendar" className="block px-4 py-2 text-white hover:bg-gray-700">Calendar</Link></li>
+                      <li><Link href="/attendance" className="block px-4 py-2 text-white hover:bg-gray-700">Attendance</Link></li>
                       <li><a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">Grader</a></li>
                       <li><a href="https://www.facebook.com/groups/tjhsstict" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">Facebook</a></li>
                       <li><a href="https://discord.gg/TFrM4YEsb4" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">Discord</a></li>
@@ -55,6 +56,7 @@ export default function RootLayout({
                 <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
                 <Link href="/resources" className="hover:text-gray-300 transition-colors">Resources</Link>
                 <Link href="/calendar" className="hover:text-gray-300 transition-colors">Calendar</Link>
+                <Link href="/attendance" className="hover:text-gray-300 transition-colors">Attendance</Link>
                 <a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Grader</a>
                 <a href="https://www.facebook.com/groups/tjhsstict" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Facebook</a>
                 <a href="https://discord.gg/TFrM4YEsb4" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Discord</a>
