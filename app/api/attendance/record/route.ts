@@ -1,20 +1,16 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextRequest, NextResponse } from 'next/server'
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-  const { studentId, code, accessToken } = req.body
-
-  if (!studentId || !code || !accessToken) {
-    return res.status(400).json({ error: 'Missing required fields' })
-  }
-
+export async function POST(request: NextRequest) {
   try {
+    const { studentId, code, accessToken } = await request.json()
+
+    if (!studentId || !code || !accessToken) {
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+    }
+
     // Verify the attendance code
     if (code !== process.env.ATTENDANCE_CODE) {
-      return res.status(401).json({ error: 'Invalid attendance code' })
+      return NextResponse.json({ error: 'Invalid attendance code' }, { status: 401 })
     }
 
     // Verify the access token and get user info
@@ -25,14 +21,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     })
 
     if (!userResponse.ok) {
-      return res.status(401).json({ error: 'Invalid access token' })
+      return NextResponse.json({ error: 'Invalid access token' }, { status: 401 })
     }
 
     const userData = await userResponse.json()
 
     // Verify that the student ID matches the authenticated user
     if (userData.username !== studentId) {
-      return res.status(403).json({ error: 'Student ID does not match authenticated user' })
+      return NextResponse.json({ error: 'Student ID does not match authenticated user' }, { status: 403 })
     }
 
     // Record attendance in Ion system
@@ -56,7 +52,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const attendanceData = await attendanceResponse.json()
 
-    res.status(200).json({
+    return NextResponse.json({
       success: true,
       message: 'Attendance recorded successfully',
       data: {
@@ -67,9 +63,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     })
   } catch (error) {
     console.error('Attendance recording error:', error)
-    res.status(500).json({ 
+    return NextResponse.json({ 
       error: 'Failed to record attendance',
       details: error instanceof Error ? error.message : 'Unknown error'
-    })
+    }, { status: 500 })
   }
 }

@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { useState } from 'react';
@@ -26,7 +27,7 @@ export default function RootLayout({
           <header className="bg-black text-white shadow-md sticky top-0 z-50">
             <div className="container mx-auto px-4 flex justify-between items-center py-8 md:py-4">
               <Link href="/" className="text-2xl font-bold flex items-center">
-                <img src="/logo.png" alt="ICT Logo" className="h-8 w-10 mr-2" />
+                <Image src="/logo.png" alt="ICT Logo" width={40} height={32} className="mr-2" />
                 TJ ICT
               </Link>
               <div className="relative md:hidden">

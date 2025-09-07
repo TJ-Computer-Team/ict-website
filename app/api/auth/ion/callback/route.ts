@@ -1,14 +1,12 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextRequest, NextResponse } from 'next/server'
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-  const { code, state } = req.query
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url)
+  const code = searchParams.get('code')
+  const state = searchParams.get('state')
 
   if (!code) {
-    return res.status(400).json({ error: 'Authorization code is required' })
+    return NextResponse.json({ error: 'Authorization code is required' }, { status: 400 })
   }
 
   try {
@@ -23,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         client_id: process.env.ION_CLIENT_ID!,
         client_secret: process.env.ION_CLIENT_SECRET!,
         redirect_uri: process.env.ION_REDIRECT_URI!,
-        code: code as string,
+        code: code,
       }),
     })
 
@@ -48,18 +46,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const userData = await userResponse.json()
 
     // Store user session (you might want to use a proper session management solution)
-    const sessionData = {
-      accessToken,
-      user: userData,
-      timestamp: Date.now(),
-    }
+    // const sessionData = {
+    //   accessToken,
+    //   user: userData,
+    //   timestamp: Date.now(),
+    // }
 
     // Redirect back to attendance page with success
     const redirectUrl = state ? `/attendance?success=true&user=${encodeURIComponent(userData.username)}` : '/attendance?success=true'
     
-    res.redirect(redirectUrl)
+    return NextResponse.redirect(redirectUrl)
   } catch (error) {
     console.error('OAuth callback error:', error)
-    res.redirect('/attendance?error=authentication_failed')
+    return NextResponse.redirect('/attendance?error=authentication_failed')
   }
 }

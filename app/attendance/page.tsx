@@ -10,7 +10,7 @@ export default function AttendancePage() {
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState<{ type: 'success' | 'error' | 'info', text: string } | null>(null)
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [userInfo, setUserInfo] = useState<any>(null)
+  const [userInfo, setUserInfo] = useState<{ username: string; accessToken?: string } | null>(null)
 
   useEffect(() => {
     // Check for OAuth callback parameters
@@ -68,8 +68,9 @@ export default function AttendancePage() {
       } else {
         setMessage({ type: 'error', text: data.error || 'Failed to record attendance' })
       }
-    } catch (error) {
+    } catch (err) {
       setMessage({ type: 'error', text: 'Network error. Please try again.' })
+      console.error('Attendance recording error:', err)
     } finally {
       setIsLoading(false)
     }
@@ -180,10 +181,10 @@ export default function AttendancePage() {
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">
           <h3 className="text-lg font-semibold text-blue-900 mb-2">How to Use</h3>
           <ul className="text-blue-800 space-y-1">
-            <li>• Click "Login with Ion" to authenticate with your Ion account</li>
+            <li>• Click &quot;Login with Ion&quot; to authenticate with your Ion account</li>
             <li>• Enter your Ion username (Student ID)</li>
             <li>• Enter the attendance code provided by ICT officers</li>
-            <li>• Click "Record Attendance" to submit your attendance</li>
+            <li>• Click &quot;Record Attendance&quot; to submit your attendance</li>
             <li>• Your attendance will be automatically recorded in the Ion system</li>
           </ul>
         </div>
