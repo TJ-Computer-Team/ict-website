@@ -1,16 +1,25 @@
 export default function ClubHistory() {
   const pastOfficers = [
-    // { year: "2025–2026", officers: [
-    //       { role: "Captain", name: "Abhiraj Mallangi" },
-    //     { role: "Co-captain", name: "Shaurya Bisht" },
-    //     { role: "Co-captain", name: "Victor Cao" },
-    //     { role: "Webmaster", name: "Samuel Chow" },
-    //     { role: "Webmaster", name: "Samuel Zhang" },
-    //     { role: "Finance", name: "Michelle Lin" },
-    //     { role: "Finance", name: "Lulu Huang" },
-    //     { role: "Sponsor", name: "Ms. Kim" },
-    //     { role: "Sponsor", name: "Mr. Rose" },
-    // ]},
+    { year: "2024–2025", officers: [
+        { role: "Captain", name: "Olivia Wu" },
+        { role: "Co-captain", name: "Clinton Morimoto" },
+        { role: "Co-captain", name: "Daniel Feng" },
+        { role: "Finance", name: "Lulu Huang" },
+        { role: "Webmaster", name: "Peter Kisselev" },
+        { role: "Webmaster", name: "Andrew Chen" },
+        { role: "Sponsor", name: "Ms. Kim" },
+        { role: "Sponsor", name: "Mr. Rose" },
+    ]},
+    { year: "2023–2024", officers: [
+        { role: "Captain", name: "Samarth Bhargav" },
+        { role: "Co-captain", name: "Avnith Vijayram" },
+        { role: "Co-captain", name: "Marina Lin" },
+        { role: "Webmaster", name: "Gabriel Xu" },
+        { role: "Finance", name: "Avni Garg" },
+        { role: "Secretary", name: "Lalit Boyapati" },
+        { role: "Sponsor", name: "Ms. Kim" },
+        { role: "Sponsor", name: "Mr. Rose" },
+    ]}
   ];
 
   const currentOfficers = [
