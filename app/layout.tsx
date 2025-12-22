@@ -41,6 +41,7 @@ export default function RootLayout({
                   <div className="absolute right-0 mt-2 w-48 bg-gray-800 bg-opacity-75 rounded-md shadow-lg z-50">
                     <ul className="flex flex-col">
                       <li><Link href="/" className="block px-4 py-2 text-white hover:bg-gray-700">Home</Link></li>
+                      <li><Link href="/about" className="block px-4 py-2 text-white hover:bg-gray-700">About</Link></li>
                       <li><Link href="/resources" className="block px-4 py-2 text-white hover:bg-gray-700">Resources</Link></li>
                       <li><Link href="/calendar" className="block px-4 py-2 text-white hover:bg-gray-700">Calendar</Link></li>
                       <li><a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-gray-700">Grader</a></li>
@@ -53,6 +54,7 @@ export default function RootLayout({
               </div>
               <div className="hidden md:flex space-x-6">
                 <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
+                <Link href="/about" className="hover:text-gray-300 transition-colors">About</Link>
                 <Link href="/resources" className="hover:text-gray-300 transition-colors">Resources</Link>
                 <Link href="/calendar" className="hover:text-gray-300 transition-colors">Calendar</Link>
                 <a href="https://www.tjctgrader.org" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Grader</a>
@@ -73,7 +75,7 @@ export default function RootLayout({
                 The GitHub repository for this project can be found <a href="https://github.com/TJ-Computer-Team/ict-website" target="_blank" rel="noopener noreferrer" className="underline">here</a>, feel free to create pull requests.
               </p>
               <p className="text-sm mt-2">
-                Website made by <a href="https://github.com/ssbdragonfly" target="_blank" rel="noopener noreferrer" className="underline">Shaurya Bisht (&apos;27)</a> and <a href="https://github.com/Gabriel-Xu" target="_blank" rel="noopener noreferrer" className="underline">Gabriel Xu (&apos;25)</a>.
+                Website made by <a href="https://github.com/ssbdragonfly" target="_blank" rel="noopener noreferrer" className="underline">Shaurya Bisht (&apos;27)</a> and <a href="https://github.com/Gabriel-Xu" target="_blank" rel="noopener noreferrer" className="underline">Gabriel Xu (&apos;25)</a>. Maintained by <a href="https://github.com/amcsz"  target="_blank" rel="noopener noreferrer" className="underline">Samuel Chow (&apos;28)</a>.
               </p>
             </div>
           </footer>
