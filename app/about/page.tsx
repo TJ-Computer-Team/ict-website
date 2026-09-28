@@ -1,5 +1,16 @@
 export default function ClubHistory() {
   const pastOfficers = [
+    { year: "2025-2026", officers: [
+        { role: "Captain", name: "Abhiraj Mallangi" },
+        { role: "Co-captain", name: "Shaurya Bisht" },
+        { role: "Co-captain", name: "Victor Cao" },
+        { role: "Webmaster", name: "Samuel Chow" },
+        { role: "Webmaster", name: "Samuel Zhang" },
+        { role: "Finance", name: "Michelle Lin" },
+        { role: "Finance", name: "Lulu Huang" },
+        { role: "Sponsor", name: "Ms. Kim" },
+        { role: "Sponsor", name: "Mr. Rose" },
+    ]},
     { year: "2024–2025", officers: [
         { role: "Captain", name: "Olivia Wu" },
         { role: "Co-captain", name: "Clinton Morimoto" },
@@ -23,15 +34,14 @@ export default function ClubHistory() {
   ];
 
   const currentOfficers = [
-    { role: "Captain", name: "Abhiraj Mallangi" },
-    { role: "Co-captain", name: "Shaurya Bisht" },
-    { role: "Co-captain", name: "Victor Cao" },
+    { role: "Captain", name: "Zain Marshall" },
+    { role: "Co-captain", name: "Samuel Zhang" },
+    { role: "Co-captain", name: "Alexander Liu" },
     { role: "Webmaster", name: "Samuel Chow" },
-    { role: "Webmaster", name: "Samuel Zhang" },
-    { role: "Finance", name: "Michelle Lin" },
-    { role: "Finance", name: "Lulu Huang" },
-    { role: "Sponsor", name: "Ms. Kim" },
-    { role: "Sponsor", name: "Mr. Rose" },
+    { role: "Secretary", name: "Jason Zhang" },
+    { role: "Finance", name: "Charlie Wang" },
+    { role: "Finance", name: "Anish Thota" },
+    { role: "Sponsor", name: "Mr. O'Neill" },
   ];
 
   return (
