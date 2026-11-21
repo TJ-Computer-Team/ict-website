@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { Calendar, MapPin, LightbulbIcon, ChevronDown } from "lucide-react";
-import "./globals.css";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -37,7 +36,7 @@ export default function Home() {
     {
       question: "Where?",
       answer:
-        "During normal meetings we meet in Curie Commons. Competitions will usually be held in Ms. Kim's and Mr. Rose's rooms.",
+        "During normal meetings we meet in Curie Commons. Competitions will usually be held in Mr. O'Neill's room",
     },
     {
       question: "Preparation?",
@@ -155,12 +154,12 @@ export default function Home() {
               section, which includes eighth period materials.
             </p>
             <a
-              href="https://docs.google.com/spreadsheets/d/1SccDSB4CX03clSghVohK7oTv_jGsjpK5jNCsKSktfVQ/edit"
+              href="https://docs.google.com/spreadsheets/d/1GL2fZ6qWSQG2sDjZ4e8Vx4DLgfteXfYDjHn5klCoVYQ/edit"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors"
             >
-              Eighth period schedule (2025-2026)
+              Eighth period schedule (2026-2027)
             </a>
           </div>
           <div className="relative h-80 md:h-96">

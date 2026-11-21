@@ -1,5 +1,5 @@
 export default function CalendarPage() {
-  const sheetUrl = "https://docs.google.com/spreadsheets/d/1SccDSB4CX03clSghVohK7oTv_jGsjpK5jNCsKSktfVQ/edit";
+  const sheetUrl = "https://docs.google.com/spreadsheets/d/1GL2fZ6qWSQG2sDjZ4e8Vx4DLgfteXfYDjHn5klCoVYQ/edit";
 
   return (
     <div className="container mx-auto px-4 py-12">
