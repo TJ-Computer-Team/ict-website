@@ -29,7 +29,8 @@ export default function Resources() {
       title: "Other ICT Materials",
       items: [
         { name: "ICT Grader", link: "https://www.tjctgrader.org/" },
-        { name: "2024 - 2025", link: "https://drive.google.com/drive/folders/1d8BsY5orAo9g95gfi3SP_FTc6woiUd6q" }, 
+        { name: "2026 - 2027", link: "https://drive.google.com/drive/folders/1nXq47tVfJ28SStDHUq050TwisHFKj8f1" }, 
+        { name: "2025 - 2026", link: "https://drive.google.com/drive/folders/1d8BsY5orAo9g95gfi3SP_FTc6woiUd6q" }, 
         { name: "2024 - 2025", link: "https://drive.google.com/drive/folders/11DWMeYSvpP131RMc1kdytq2ofvkGiXhw" }, 
         { name: "2023 - 2024", link: "https://drive.google.com/drive/folders/1aNbcjefGf8lncTSTRWeu356v25fkbgg_" }, 
       ]
